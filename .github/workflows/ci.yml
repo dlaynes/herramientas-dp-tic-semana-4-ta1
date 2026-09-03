@@ -1,8 +1,10 @@
 name: Pipeline Frontend
 
 on:
+  push:
+    branches: [ "master", "main" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master", "main" ]
 
 jobs:
   build-and-test:
@@ -21,10 +23,10 @@ jobs:
     - name: Instalar dependencias
       run: npm ci
 
-    - name: Verificar Linting y Formateo
+    - name: Verificar Linting
       run: npm run lint
 
-    - name: Ejecutar Pruebas Unitarias (Jest)
+    - name: Ejecutar Pruebas Unitarias (Vitest)
       run: npm run test
 
     - name: Compilar Proyecto (TypeScript a JS)
