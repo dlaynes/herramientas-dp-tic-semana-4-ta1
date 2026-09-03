@@ -1,0 +1,244 @@
+﻿/* ===== LogiTrack Solutions ===== */
+
+.site {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-inline: 24px;
+  box-sizing: border-box;
+}
+
+/* Header / nav */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.brand-name {
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+
+.brand-name strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  padding: 72px 0 64px;
+  background: linear-gradient(180deg, var(--accent-bg), transparent 60%);
+}
+
+.hero-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-copy {
+  max-width: 720px;
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin: 0 0 20px;
+}
+
+.hero-text {
+  font-size: 18px;
+  max-width: 54ch;
+  margin: 0 auto 28px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+}
+
+/* Sections */
+.section {
+  padding: 64px 0;
+}
+
+.section-alt {
+  background: var(--accent-bg);
+}
+
+.section h2 {
+  font-size: 34px;
+  letter-spacing: -0.5px;
+  margin: 0 0 12px;
+}
+
+.lead {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: var(--text-h);
+}
+
+.card p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+}
+
+.contact .btn {
+  margin-top: 24px;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  margin-top: auto;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
